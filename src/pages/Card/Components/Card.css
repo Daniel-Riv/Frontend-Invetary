@@ -1,0 +1,13 @@
+.degree:after {
+    content: '°C';
+    position: absolute;
+    font-size: 3rem;
+    margin-top: 0.4rem;
+    font-weight: 400;
+
+  }
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
