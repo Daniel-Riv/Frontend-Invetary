@@ -9,7 +9,6 @@ const Card = ({ id, name, description, stock, amount }) => {
     //const { session, setSession } = useContext(SessionContext);
     const navigate = useNavigate();
     const [modal, setModal] = useState(false);
-    console.log(modal)
     const handleDelete = async () => {
         await fetch(`https://apiinventary.herokuapp.com/api/product/delete/${id}`, {
             method: 'DELETE'

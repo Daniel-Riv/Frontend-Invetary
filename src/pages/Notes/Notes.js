@@ -3,6 +3,7 @@ import Nav from "./components/Nav/Nav";
 import AllNotes from "../Card/AllNotes";
 
 const Notes = () => {
+  
   return (
     <div>
       <Nav/>

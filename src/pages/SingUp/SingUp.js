@@ -43,7 +43,7 @@ const SingUp = () => {
             setError(data.error)
             setShowError(true)
           } else {
-            console.log(data);
+            
             localStorage.setItem("token", data.token); //guardar token en localStorage
             localStorage.setItem("token-init-date", new Date().getTime()); //guarda hora actual
             //window.location.reload(); //recargar la pagina

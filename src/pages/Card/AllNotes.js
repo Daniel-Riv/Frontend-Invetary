@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import Card from "./Components/Card";
-
+import { SessionContext } from "../../provider/sessionContext";
 
 const AllNotes = () => {
+    const { session, setSession } = useContext(SessionContext);
     const [notes, setNotes] = useState();
     useEffect(() => {
         const getAllnotes = async () => {
             await fetch('https://apiinventary.herokuapp.com/api/product/all')
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data)
                     const { product } = data;
                     setNotes(product);
                 });

@@ -9,6 +9,7 @@ import Login from "./pages/SingIn/Login";
 import SingUp from "./pages/SingUp/SingUp";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { SessionContext } from "./provider/sessionContext";
+import AllUser from "./pages/admin/admin";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/Notes" element={<Notes />} />
           <Route path="/NewPassword" element={<SetPassword />} />
           <Route path="/ForgotPassword" element={<ForgotPassword/>}/>
+          <Route path="/unlock-user" element={<AllUser/>}/>
         </Routes>
       </Router>
     </SessionContext.Provider>

@@ -36,7 +36,6 @@ const EditNotes = ({ id, modal }) => {
             })
                 .then(res => res.json())
                 .then((data) => {
-                    console.log(data)
                     const { productId } = data;
                     if (data === false) {
                         console.log(data)

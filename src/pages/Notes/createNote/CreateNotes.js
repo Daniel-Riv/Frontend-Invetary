@@ -6,7 +6,6 @@ import { Alert } from "../../alert/Alert";
 import { useForm } from "../../../hook/useForm";
 
 const CreateNotes = () => {
-
   const [error, setError] = useState("");
   const [showError, setShowError] = useState(false)
   const navigate = useNavigate();
@@ -39,7 +38,6 @@ const CreateNotes = () => {
         .then((data) => {
           const { newProduct } = data; //respuesta del back
           if (data.succes === false) {
-            console.log(data);
             setError(data.error)
             setShowError(true)
           } else {

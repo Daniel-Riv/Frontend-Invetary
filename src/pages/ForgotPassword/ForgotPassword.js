@@ -35,13 +35,11 @@ const ForgotPassword = () => {
         .then((response) => response.json())
         .then((data) => {
           const { message } = data; //respuesta del back
-          console.log(message);
           if (data.success === false) {
             console.log(data);
             setError(data.error)
             setShowError(true)
           } else {
-            console.log(message);
             navigate("/");
           }
         })
